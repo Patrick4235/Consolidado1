@@ -1,3 +1,7 @@
+#importar libreria
+import os
+
+# definicion de operaciones
 def suma(a,b):
     resultado=a+b
     return resultado
@@ -20,21 +24,31 @@ try:
 except ValueError:
         print("SOLO SE ACEPTAN NUMEROS")
 
+#menu de ejecuciones
+operacion = 1
+while operacion > 0 or operacion < 5:
 
+    operacion = int (input("escriba el numero de la operacion a realisar: \n 1.- suma \n 2.- Resta \n 3.- multiplicacion \n 4.- divicion \n 5.- Salir \n Coloque numero: "))
 
-operacion = int (input("escriba el numero de la operacion a realisar: \n 1.- suma \n 2.- Resta \n 3.- multiplicacion \n 4.- divicion \n Coloque numero: "))
-
-if operacion == 1:
-    print(f"el resultado es: {suma(Num1,Num2)}")
-        
-elif operacion == 2:
-    print(f"el resultado es: {resta(Num1,Num2)}")
+    if operacion == 1:
+        print(f"el resultado es: {suma(Num1,Num2)}")
+        os.system("pause")
+        os.system("cls")
     
-elif operacion == 3:
-    print(f"el resultado es: {multiplicacion(Num1,Num2)}")
+    elif operacion == 2:
+        print(f"el resultado es: {resta(Num1,Num2)}")
+        os.system("pause")
+        os.system("cls")
     
-elif operacion == 4:
-    try:
+    elif operacion == 3:
+        print(f"el resultado es: {multiplicacion(Num1,Num2)}")
+        os.system("pause")
+        os.system("cls")
+    
+    elif operacion == 4:
         print(f"el resultado es: {divicion(Num1,Num2)}")
-    except ZeroDivisionError:
-        print("NO SE PUEDE DIVIDIR POR CERO")
+        os.system("pause")
+        os.system("cls")
+
+    elif operacion == 5:
+        break
