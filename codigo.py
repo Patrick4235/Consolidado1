@@ -20,14 +20,27 @@ Num2 = input("ingrese el primer numero: ")
 operacion = input("escriba el numero de la operacion a realisar: \n 1.- suma \n 2.- Resta \n 3.- multiplicacion \n 4.- divicion \n Coloque numero: ")
 
 if operacion == 1:
-    suma(Num1,Num2)
+    try:
+        suma(Num1,Num2)
+    except ValueError:
+        print("SOLO SE ACEPTAN NUMEROS")
 
 elif operacion ==2:
-    resta(Num1,Num2)
+    try:
+        resta(Num1,Num2)
+    except ValueError:
+        print("SOLO SE ACEPTAN NUMEROS")
     
 elif operacion ==3:
-    multiplicacion(Num1,Num2)
+    try:
+        multiplicacion(Num1,Num2)
+    except ValueError:
+        print("SOLO SE ACEPTAN NUMEROS")
     
 elif operacion ==4:
-    divicion(Num1,Num2)
-    
+    try:
+        divicion(Num1,Num2)
+    except ZeroDivisionError:
+        print("NO SE PUEDE DIVIDIR POR CERO")
+    except ValueError:
+        print("SOLO SE ACEPTAN NUMEROS")
